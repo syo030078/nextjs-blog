@@ -24,8 +24,8 @@ export default function Home() {
         <a href="http://54.250.46.74/" target="_blank" rel="noopener noreferrer" className={utilStyles.portfolioCard}>
           <div className={utilStyles.portfolioCardPlaceholder}>
             <div className={utilStyles.portfolioCardOverlay}>
-              <span className={utilStyles.portfolioAppName}>Portfolio App</span>
-              <span className={utilStyles.portfolioTagline}>エンジニアの実績を、一目で伝えるアプリ</span>
+              <span className={utilStyles.portfolioAppName}>Music Work</span>
+              <span className={utilStyles.portfolioTagline}>音楽家と依頼者をつなぐマッチングサービス</span>
             </div>
           </div>
         </a>

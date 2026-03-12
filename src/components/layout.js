@@ -29,23 +29,21 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header /> {/* ヘッダーコンポーネントを追加 */}
-      <p style={{ textAlign: 'center', padding: '20px' }}>Software Engineer</p>
       <header className={styles.header}>
         {home ? (
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <Box>
-              <Heading as="h1" size="xl" mt={2} p={3}>
+              <Heading as="h1" size="xl" m={0} pb="0.5rem">
                 {name}
               </Heading>
+              <p style={{ color: '#666', fontSize: '0.95rem', margin: 0 }}>Software Engineer</p>
             </Box>
             <Image
               borderRadius="full"
               background={'rgb(191, 191, 191)'}
-              boxSize={150}
-              src="/images/mein_soundcat_monoicon.jpeg"
+              boxSize="64px"
+              src="/images/default-avatar.svg"
               alt="Syo Miyata"
-              height={70}
-              width={70}
             />
           </div>
         ) : (
@@ -60,7 +58,7 @@ export default function Layout({ children, home }) {
                 borderRadius="full"
                 background={'rgb(191, 191, 191)'}
                 boxSize={150}
-                src="/images/mein_soundcat_monoicon.jpeg"
+                src="/images/default-avatar.svg"
                 alt="Syo Miyata"
                 height={70}
                 width={70}
