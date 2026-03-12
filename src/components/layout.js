@@ -12,7 +12,7 @@ export const siteTitle = 'Syo Miyata';
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container} style={{ margin: '0 auto', backgroundColor: 'rgb(252, 249, 246)' }}>
+    <div className={styles.container} style={{ margin: '0 auto', backgroundColor: 'var(--bg-primary)' }}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -36,11 +36,11 @@ export default function Layout({ children, home }) {
               <Heading as="h1" size="xl" m={0} pb="0.5rem">
                 {name}
               </Heading>
-              <p style={{ color: '#666', fontSize: '0.95rem', margin: 0 }}>Software Engineer</p>
+              <p style={{ color: 'var(--subtitle-color)', fontSize: '0.95rem', margin: 0 }}>Software Engineer</p>
             </Box>
             <Image
               borderRadius="full"
-              background={'rgb(191, 191, 191)'}
+              background={'var(--avatar-bg)'}
               boxSize="64px"
               src="/images/default-avatar.svg"
               alt="Syo Miyata"
@@ -56,7 +56,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 borderRadius="full"
-                background={'rgb(191, 191, 191)'}
+                background={'var(--avatar-bg)'}
                 boxSize={150}
                 src="/images/default-avatar.svg"
                 alt="Syo Miyata"

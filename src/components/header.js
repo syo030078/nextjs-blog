@@ -1,4 +1,5 @@
-import { Box, Flex, Link } from '@chakra-ui/react';
+import { Box, Flex, Link, HStack } from '@chakra-ui/react';
+import ColorModeToggle from './color-mode-toggle';
 
 export default function Header() {
   return (
@@ -9,11 +10,12 @@ export default function Header() {
             Syo Miyata
           </Link>
         </Box>
-        <Box>
+        <HStack spacing={2}>
           <Link href="https://github.com/syo030078" isExternal>
             GitHub
           </Link>
-        </Box>
+          <ColorModeToggle />
+        </HStack>
       </Flex>
     </header>
   );
