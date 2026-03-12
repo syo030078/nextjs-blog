@@ -50,3 +50,61 @@ margin: 0 0 1.25rem;
 .lightText {
 color: #666;
 }
+
+/* Portfolio Card */
+.portfolioCard {
+  display: block;
+  text-decoration: none;
+  background: white;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  border: 2px solid #86efac;
+  box-shadow: 0 2px 12px rgba(22, 163, 74, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.15);
+}
+
+.portfolioCardImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolioCardPlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(145deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.portfolioCardOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.portfolioAppName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.portfolioTagline {
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
