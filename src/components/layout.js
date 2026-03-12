@@ -8,7 +8,7 @@ import Header from './header'; // ヘッダーコンポーネントを追加
 
 
 const name = 'Syo Miyata';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Syo Miyata';
 
 export default function Layout({ children, home }) {
   return (
@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Syo Miyata - Software Engineer"
         />
         <meta
           property="og:image"

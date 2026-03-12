@@ -1,40 +1,35 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
-import { getSortedPostsData } from '../../lib/posts';
-import Date from '../components/date';
+import { motion } from 'framer-motion';
 
-export default function Home({ allPostsData }) {
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export default function Home() {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        transition={{ duration: 0.5 }}
+      >
+        <a href="http://54.250.46.74/" target="_blank" rel="noopener noreferrer" className={utilStyles.portfolioCard}>
+          <div className={utilStyles.portfolioCardPlaceholder}>
+            <div className={utilStyles.portfolioCardOverlay}>
+              <span className={utilStyles.portfolioAppName}>Portfolio App</span>
+              <span className={utilStyles.portfolioTagline}>エンジニアの実績を、一目で伝えるアプリ</span>
+            </div>
+          </div>
+        </a>
+      </motion.section>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 }
