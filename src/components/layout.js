@@ -7,8 +7,7 @@ import Link from 'next/link';
 import Header from './header'; // ヘッダーコンポーネントを追加
 
 
-const name = 'Syo Miyata';
-export const siteTitle = 'Syo Miyata';
+import { name, siteTitle } from '../lib/constants';
 
 export default function Layout({ children, home }) {
   return (
