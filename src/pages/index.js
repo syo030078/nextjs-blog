@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
+import Bio from '../components/bio';
+import { siteTitle } from '../lib/constants';
 import utilStyles from '../styles/utils.module.css';
 import { motion } from 'framer-motion';
 
@@ -30,6 +32,10 @@ export default function Home() {
           </div>
         </a>
       </motion.section>
+
+      <Bio entries={[
+        { year: '1989', text: 'Born in Aichi, Japan' },
+      ]} />
     </Layout>
   );
 }
